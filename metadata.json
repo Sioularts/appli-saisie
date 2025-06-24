@@ -1,0 +1,6 @@
+
+{
+  "name": "Person Entry App",
+  "description": "An application to capture person details, simulate adding them to a Google Sheet, and simulate sending a confirmation email. For actual Google Sheets integration and email sending, a backend service is required."
+}
+    
