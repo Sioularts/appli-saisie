@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    IMPORTANT: La balise <base> doit venir avant les liens vers les scripts ou CSS 
+    qui utilisent des chemins relatifs.
+    Remplacez '/appli-saisie/' si le nom de votre dépôt GitHub est différent.
+    Le slash final est important.
+  -->
+  <base href="/appli-saisie/">
+
   <title>Person Entry App</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Heroicons CSS link removed as icons are inline SVGs -->
-
   <!-- Babel Standalone for JSX/TSX transpilation in browser -->
-  <!-- Make sure to use a version compatible with your React version if issues arise, but 7.24.x is recent -->
   <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
 
 <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
     "react/": "https://esm.sh/react@^19.1.0/"
   }
 }
@@ -25,12 +31,13 @@
 </head>
 <body class="bg-gray-100">
   <div id="root"></div>
-  <!-- Instruct Babel to transpile this script.
-       data-presets="react,typescript" tells Babel how to transform the code.
-       The src path "./index.tsx" is correct.
+  <!-- 
+    Instruct Babel to transpile this script.
+    data-presets="react,typescript" tells Babel how to transform the code.
+    Avec la balise <base> href="/appli-saisie/", src="./index.tsx" sera correctement 
+    résolu en /appli-saisie/index.tsx par rapport au domaine.
   -->
   <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
-  <!-- La balise script dupliquée a été supprimée -->
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
