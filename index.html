@@ -33,11 +33,9 @@
   <div id="root"></div>
   <!-- 
     Instruct Babel to transpile this script.
-    data-presets="react,typescript" tells Babel how to transform the code.
-    Avec la balise <base> href="/appli-saisie/", src="./index.tsx" sera correctement 
-    résolu en /appli-saisie/index.tsx par rapport au domaine.
+    Utilisation de l'URL complète pour s'assurer que Babel trouve le fichier index.tsx.
   -->
-  <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
+  <script type="text/babel" data-presets="react,typescript" src="https://sioularts.github.io/appli-saisie/index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
